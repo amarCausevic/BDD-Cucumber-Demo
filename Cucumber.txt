@@ -1,0 +1,23 @@
+Cucumber supports same as Cypress @Before tag which means that all in the method amar will be executed before
+running the main scenario!
+
+-------------------
+@AddPlace
+Feature:
+    Scenario:
+    ...
+
+@DeletePlace
+Feature:
+    Scenario:
+    ...
+-------------------
+Cucumber Options
+@CucumberOptions(
+        features = "src/test/java/org/demo/features",
+        glue = "org/demo/stepDefinations",
+        tags = "@DeleteTag"
+)
+
+-------------------
+@Before(@DeletePlace){...}
